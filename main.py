@@ -41,7 +41,7 @@ def simplex_solver(C, A, b, eps=1e-9):
         leaving_var_index = np.argmin(ratios)
 
         if ratios[leaving_var_index] == float('inf'):
-            return {"solver_state": "Method is not applicable", "x_star": None, "z": None}
+            return {"solver_state": "Method is not applicable!", "x_star": None, "z": None}
 
         pivot_value = tableau[leaving_var_index, entering_var_index]
         tableau[leaving_var_index] /= pivot_value
